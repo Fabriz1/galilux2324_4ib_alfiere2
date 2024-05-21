@@ -122,7 +122,7 @@ public void scrivifile(String[][] scacchiera, char[] mossa, String nome) {
         System.out.println("    a    b    c    d    e    f    g    h");
         
                 System.out.println("");
-            
+                 input(scacchiera, nome);
         }else if(scelta=='n'){
         System.out.println("Scopo del gioco: Lo scopo degli scacchi è quello di mettere il re avversario sotto scacco " +
                 "in modo tale che non ci sia nessuna mossa legale per liberarlo.\n");
