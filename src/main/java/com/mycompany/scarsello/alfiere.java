@@ -425,17 +425,21 @@ public void scrivifile(String[][] scacchiera, char[] mossa, String nome) {
     }
     public boolean controllomovimento(char[] mossa){
     boolean risultato=false;
-    int li=(int) mossa[1];
+    int li=(int) mossa[1];                    //converto tramite codice ascii le lettere in numeri e faccio un cast dei numeri in int 
     int lf=(int) mossa[4];
     int ni=mossa[2]-'0';
-    int nf=mossa[5]-'0';
-    int n=Math.abs(ni-nf);                      //valore assoluto
-    int l=Math.abs(li-lf);
+    int nf=mossa[5]-'0';                        
+    int n=Math.abs(ni-nf);                      //eseguo una sottrazione tra lettera iniziale e lettera finale
+    int l=Math.abs(li-lf);                     //eseguo una sottrazione tra il numero iniziale e il numero finale
+                                                //tramite gli if verificherò che la differenza tra coordinate sotto valore assoluto sia uguale
+                                                //se fosse diverso vorrebbe dire che l'alfiere è stato mosso in modo errato
     if(n!=l){
         risultato=true;
     }
     return risultato;    
     }
+
+    
     public boolean controllopedina(char[] mossa, String[][] scacchiera ){
         boolean risultato=false; 
         int ri=(int) mossa[1]-97;
